@@ -16,7 +16,7 @@ jobs:
     - name: make
       run: make all
     - name: uploaded
-    uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v4
       with:
-          name: mmc
-          path: /usr/local/bin/mmc
+         name: mmc
+         path: /usr/local/bin/mmc
