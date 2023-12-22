@@ -13,13 +13,16 @@ jobs:
     name: Build on ubuntu-18.04 armv7
     steps:
     - uses: actions/checkout@v3
-    - uses: uraimo/run-on-arch-action@v2
-      name: Run commands
-      id: runcmd
-      with:
-       arch: armv7
-       distro: ubuntu18.04
-       run: make install
+    - name: update 
+      run: apt-get install ndk-build
+    #- uses: uraimo/run-on-arch-action@v2
+      #name: Run commands
+      #id: runcmd
+      #with:
+       #arch: armv7
+       #distro: ubuntu18.04
+    - name: make
+      run: make install
     - name: uploaded
       uses: actions/upload-artifact@v4
       with:
