@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: make
       run: make all
-    - uses: actions/upload-artifact@v4
-      with:
-      name: test
-      path: /usr/local/bin/mmc
+    - uses: actions/upload-artifact@v4 
+    with:
+    name: mmc
+    path: /usr/local/bin/mmc
